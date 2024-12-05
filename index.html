@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compound Interest Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Compound Interest Calculator</h1>
+      <img
+        src="https://img.pikbest.com/wp/202424/graphic-clip-art-dollar-gold-icon-money-vector-illustration_10613259.jpg!sw800"
+        alt="Site Logo"
+        width="150"
+        height="150"
+        class="transition-image"
+      />
+    </header>
+
+    <main class="grid-container">
+      <section class="calculator">
+        <form id="interestForm">
+          <div class="form-group">
+            <label for="principal">Principal Amount ($):</label>
+            <input
+              type="number"
+              id="principal"
+              min="0"
+              step="0.01"
+              value="1000"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="rate">Interest Rate (%):</label>
+            <input
+              type="range"
+              id="rate"
+              min="0"
+              max="20"
+              step="0.1"
+              value="5"
+            />
+            <output for="rate" id="rateValue">5%</output>
+          </div>
+
+          <div class="form-group">
+            <label for="compounds">Compounds per year:</label>
+            <select id="compounds">
+              <option value="1">1 (Annually)</option>
+              <option value="4">4 (Quarterly)</option>
+              <option value="12">12 (Monthly)</option>
+              <option value="365">365 (Daily)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="years">Total Years:</label>
+            <input type="number" id="years" min="1" step="1" value="10" />
+          </div>
+
+          <div class="form-group">
+            <progress id="progress" value="10" max="30"></progress>
+          </div>
+        </form>
+
+        <div class="results">
+          <p>Money Earned: <span id="earned">$0.00</span></p>
+          <p>Total Amount: <span id="total">$0.00</span></p>
+        </div>
+
+        <!--  canvas for the chart here -->
+        <div class="form-group">
+          <canvas id="investmentChart" width="400" height="200"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://codesandbox.io/p/sandbox/yrgmhl"
+          >View Source Code Sandbox</a
+        >
+      </p>
+    </footer>
+
+    <!-- Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
