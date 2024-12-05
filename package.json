@@ -1,0 +1,20 @@
+{
+  "name": "compound-interest-calculator",
+  "version": "1.0.0",
+  "description": "A simple compound interest calculator with chart visualization.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'No build step required'",
+    "test": "echo 'No tests available'"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.0.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "keywords": ["compound interest", "calculator", "chart", "HTML", "JavaScript"]
+}
