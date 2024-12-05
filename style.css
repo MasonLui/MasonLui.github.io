@@ -1,0 +1,172 @@
+/* Basic reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Dark header styling */
+header {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 10px;
+  transition: transform 0.3s;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+/* Main container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin-top: 20px; /* Space below header */
+  gap: 20px; /* Add spacing between children */
+}
+
+/* Calculator box */
+.calculator {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Gap between label and input */
+}
+
+input[type="number"],
+input[type="range"],
+select,
+progress {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="range"] {
+  cursor: pointer;
+}
+
+#rateValue {
+  font-weight: 600;
+  color: #007acc;
+  margin-left: 5px;
+}
+
+/* Progress bar styling */
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  margin-top: 10px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f0f4f8;
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #007acc;
+  border-radius: 5px;
+}
+
+/* Results section styling */
+.results {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.results p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Canvas for chart */
+canvas {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* Space between text and link */
+}
+
+footer a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  main {
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
